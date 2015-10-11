@@ -38,20 +38,24 @@ module states {
         }
         //callback function  - player looses - outcome 1 -  - path 1.1.1
         private _getOnButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 1;
             changeState(config.OVER_STATE);
         }
 
         //callback function - player looses - outcome 2 -  - path 1.1.2
         private _swimByButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 2;
             changeState(config.OVER_STATE);
         }
 
         //callback function  - player looses - outcome 3 -  - path 1.2.1
         private _scream_2_ButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 3;
             changeState(config.OVER_STATE);
         }
         //callback function  - player looses - outcome 4  -  - path 1.2.2
         private _deadButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 4;
             changeState(config.OVER_STATE);
         }
 
@@ -75,21 +79,25 @@ module states {
 
         //callback function - player looses - outcome 5  -    - path 2.1.1
         private _drinkButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 5;
             changeState(config.OVER_STATE);
         }
 
         //callback function- player looses - outcome 6  -    - path 2.1.2
         private _sleepButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 6;
             changeState(config.OVER_STATE);
         }
 
         //callback function - player looses - outcome 7  -    - path 2.2.1
         private _attackButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 7;
             changeState(config.OVER_STATE);
         }
 
         //callback function - player wins - outcome 8  -    - path 2.2.2
         private _feedButtonClicked(event: createjs.MouseEvent): void {
+            outcome = 8;
             changeState(config.OVER_STATE);
         }
 
@@ -214,7 +222,7 @@ module states {
         private _dragon(): void {
             stage.removeAllChildren();
 
-            this._textLabel.text = (this._name + " put the bread in his pouch to save it for when he is truly starving. \n\nHe continued to walk until he saw a big cave.\n\nHe/she went in and saw a big dragon sleeping there.\n\nIt was tempting to attack the dragon while it was sleeping.\n\nBut " + this._name + " also felt bad about killing.\n\nHe/she though that perhaps he can tame the dragon by feeding him the bread he found. What will " + this._name + " do in the end?...");
+            this._textLabel.text = (this._name + " put the bread in his pouch to save it for when he is truly starving. \n\nHe continued to walk until he saw a big cave.\n\nHe/she went in and saw a big dragon sleeping there.\n\nIt was tempting to attack the dragon while it was sleeping.\n\nBut " + this._name + " also felt bad about killing.\n\nHe/she though that perhaps he can tame the dragon by feeding him the bread he found.\n\nWhat will " + this._name + " do in the end?...");
             this.addChild(this._textLabel);
             //instantiate and add a left button
             this._leftButton = new objects.Button("attackButton", 150, 340);

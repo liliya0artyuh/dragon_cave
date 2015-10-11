@@ -21,6 +21,8 @@ var currentState; // alias for our current state
 var menu;
 var game;
 var over;
+var name;
+var outcome;
 function preload() {
     //   assets = new createjs.LoadQueue();
     //assets.installPlugin(createjs.Sound);
@@ -74,11 +76,10 @@ function changeState(state) {
             break;
         case config.OVER_STATE:
             stage.removeAllChildren();
-            over = new states.Over();
+            over = new states.Over(outcome);
             currentState = over;
             break;
     }
     currentState.start();
     console.log(currentState.numChildren);
 }
-//# sourceMappingURL=game.js.map

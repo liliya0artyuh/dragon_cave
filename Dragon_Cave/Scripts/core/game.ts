@@ -26,6 +26,8 @@ var currentState: objects.Scene; // alias for our current state
 var menu: states.Menu;
 var game: states.Game;
 var over: states.Over;
+var name: string;
+var outcome: number;
 
 
 function preload(): void {
@@ -98,7 +100,7 @@ function changeState(state): void {
 
         case config.OVER_STATE:
             stage.removeAllChildren();
-            over = new states.Over();
+            over = new states.Over(outcome);
             currentState = over;
             break;
     }

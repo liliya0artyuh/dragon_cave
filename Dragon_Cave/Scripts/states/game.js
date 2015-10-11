@@ -33,18 +33,22 @@ var states;
         };
         //callback function  - player looses - outcome 1 -  - path 1.1.1
         Game.prototype._getOnButtonClicked = function (event) {
+            outcome = 1;
             changeState(config.OVER_STATE);
         };
         //callback function - player looses - outcome 2 -  - path 1.1.2
         Game.prototype._swimByButtonClicked = function (event) {
+            outcome = 2;
             changeState(config.OVER_STATE);
         };
         //callback function  - player looses - outcome 3 -  - path 1.2.1
         Game.prototype._scream_2_ButtonClicked = function (event) {
+            outcome = 3;
             changeState(config.OVER_STATE);
         };
         //callback function  - player looses - outcome 4  -  - path 1.2.2
         Game.prototype._deadButtonClicked = function (event) {
+            outcome = 4;
             changeState(config.OVER_STATE);
         };
         //callback function that allows to respond to button click events - path 2
@@ -61,18 +65,22 @@ var states;
         };
         //callback function - player looses - outcome 5  -    - path 2.1.1
         Game.prototype._drinkButtonClicked = function (event) {
+            outcome = 5;
             changeState(config.OVER_STATE);
         };
         //callback function- player looses - outcome 6  -    - path 2.1.2
         Game.prototype._sleepButtonClicked = function (event) {
+            outcome = 6;
             changeState(config.OVER_STATE);
         };
         //callback function - player looses - outcome 7  -    - path 2.2.1
         Game.prototype._attackButtonClicked = function (event) {
+            outcome = 7;
             changeState(config.OVER_STATE);
         };
         //callback function - player wins - outcome 8  -    - path 2.2.2
         Game.prototype._feedButtonClicked = function (event) {
+            outcome = 8;
             changeState(config.OVER_STATE);
         };
         //public methods
@@ -169,7 +177,7 @@ var states;
         };
         Game.prototype._dragon = function () {
             stage.removeAllChildren();
-            this._textLabel.text = (this._name + " put the bread in his pouch to save it for when he is truly starving. \n\nHe continued to walk until he saw a big cave.\n\nHe/she went in and saw a big dragon sleeping there.\n\nIt was tempting to attack the dragon while it was sleeping.\n\nBut " + this._name + " also felt bad about killing.\n\nHe/she though that perhaps he can tame the dragon by feeding him the bread he found. What will " + this._name + " do in the end?...");
+            this._textLabel.text = (this._name + " put the bread in his pouch to save it for when he is truly starving. \n\nHe continued to walk until he saw a big cave.\n\nHe/she went in and saw a big dragon sleeping there.\n\nIt was tempting to attack the dragon while it was sleeping.\n\nBut " + this._name + " also felt bad about killing.\n\nHe/she though that perhaps he can tame the dragon by feeding him the bread he found.\n\nWhat will " + this._name + " do in the end?...");
             this.addChild(this._textLabel);
             //instantiate and add a left button
             this._leftButton = new objects.Button("attackButton", 150, 340);
@@ -186,4 +194,3 @@ var states;
     })(objects.Scene);
     states.Game = Game;
 })(states || (states = {}));
-//# sourceMappingURL=game.js.map
