@@ -103,5 +103,6 @@ function changeState(state): void {
             break;
     }
     currentState.start();
+    console.log(currentState.numChildren);
 
 }

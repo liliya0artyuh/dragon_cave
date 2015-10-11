@@ -79,5 +79,5 @@ function changeState(state) {
             break;
     }
     currentState.start();
+    console.log(currentState.numChildren);
 }
-//# sourceMappingURL=game.js.map
