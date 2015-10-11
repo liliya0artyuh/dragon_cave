@@ -5,7 +5,7 @@
         height: number;
         //constructor
         constructor(pathString: string, x: number, y: number) {
-            super("../../Assets/images/" + pathString + ".png");
+            super(assets.getResult(pathString));
 
             this.x = x;
             this.y = y;

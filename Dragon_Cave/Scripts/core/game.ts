@@ -36,24 +36,25 @@ var outcome: number;
 
 //manifest of all of the assets
 var manifest= [
-    { id: "againButton", src: "Assets/images/againButton.png" },
-    { id: "attackButton", src: "Assets/images/attackButton.png" },
-    { id: "deadButton", src: "Assets/images/deadButton.png" },
-    { id: "drinkButton", src: "Assets/images/drinkButton.png" },
-    { id: "eatButton", src: "Assets/images/eatButton.png" },
-    { id: "feedButton", src: "Assets/images/feedButton.png" },
-    { id: "getOnButton", src: "Assets/images/getOnButton.png" },
-    { id: "leftButton", src: "Assets/images/leftButton.png" },
-    { id: "rightButton", src: "Assets/images/rightButton.png" },
-    { id: "saveButton", src: "Assets/images/saveButton.png" },
-    { id: "screamButton", src: "Assets/images/screamButton.png" },
-    { id: "sleepButton", src: "Assets/images/sleepButton.png" },
-    { id: "startButton", src: "Assets/images/startButton.png" },
-    { id: "swimButton", src: "Assets/images/swimButton.png" },
-    { id: "swimByButton", src: "Assets/images/swimByButton.png" },
-    { id: "tooth", src: "Assets/images/tooth.jpg" },
-    { id: "dragon", src: "Assets/images/dragon_1.jpg" },
-    { id: "logo", src: "Assets/images/logo_small.png" }
+    { id: "againButton", src: "../../Assets/images/againButton.png" },
+    { id: "attackButton", src: "../../Assets/images/attackButton.png" },
+    { id: "deadButton", src: "../../Assets/images/deadButton.png" },
+    { id: "drinkButton", src: "../../Assets/images/drinkButton.png" },
+    { id: "eatButton", src: "../../Assets/images/eatButton.png" },
+    { id: "feedButton", src: "../../Assets/images/feedButton.png" },
+    { id: "getOnButton", src: "../../Assets/images/getOnButton.png" },
+    { id: "leftButton", src: "../../Assets/images/leftButton.png" },
+    { id: "rightButton", src: "../../Assets/images/rightButton.png" },
+    { id: "saveButton", src: "../../Assets/images/saveButton.png" },
+    { id: "screamButton", src: "../../Assets/images/screamButton.png" },
+    { id: "sleepButton", src: "../../Assets/images/sleepButton.png" },
+    { id: "startButton", src: "../../Assets/images/startButton.png" },
+    { id: "swimButton", src: "../../Assets/images/swimButton.png" },
+    { id: "swimByButton", src: "../../Assets/images/swimByButton.png" },
+    { id: "soundtrack", src: "../../Assets/audio/gameSound.m4a" }
+    //{ id: "tooth", src: "../../Assets/images/tooth.jpg" },
+    //{ id: "dragon", src: "../../Assets/images/dragon_1.jpg" },
+    //{ id: "logo", src: "../../Assets/images/logo_small.png" }
 ];
 
 
