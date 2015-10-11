@@ -13,3 +13,17 @@ canvas {
     width:80%;
     margin: 0 auto;
 }
+
+#gameTitle {
+    text-align: center;
+    font-size: 25px;
+    margin: 20px 0 20px 0;
+    color: white;
+}
+
+#txtName {
+    position: absolute;
+    top:280px;
+    left: 530px;
+    z-index: 101;
+}

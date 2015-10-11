@@ -59,6 +59,9 @@ var states;
         //private method
         //callback function that allows to respond to button click events
         Over.prototype._buttonClicked = function (event) {
+            document.getElementById("txtName").value = "";
+            document.getElementById("txtName").style.display = "inline";
+            name = "";
             changeState(config.MENU_STATE);
         };
         //public methods
@@ -95,4 +98,3 @@ var states;
     })(objects.Scene);
     states.Over = Over;
 })(states || (states = {}));
-//# sourceMappingURL=over.js.map

@@ -65,6 +65,9 @@ module states {
         //private method
         //callback function that allows to respond to button click events
         private _buttonClicked(event: createjs.MouseEvent): void {
+            (<HTMLInputElement>document.getElementById("txtName")).value = "";
+            document.getElementById("txtName").style.display = "inline";
+            name = "";
             changeState(config.MENU_STATE);
         }
 

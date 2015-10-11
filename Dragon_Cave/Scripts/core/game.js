@@ -54,6 +54,9 @@ function preload() {
     //event listener triggers when assets are completely loaded
     assets.on("complete", init, this);
     assets.loadManifest(manifest);
+    document.getElementById("txtName").value = "";
+    name = "";
+    document.getElementById("txtName").style.display = "inline";
 }
 function init() {
     console.log("Game started...");
@@ -96,7 +99,7 @@ function changeState(state) {
             break;
         case config.PLAY_STATE:
             stage.removeAllChildren();
-            game = new states.Game("Pin");
+            game = new states.Game(name);
             currentState = game;
             break;
         case config.OVER_STATE:
@@ -108,4 +111,3 @@ function changeState(state) {
     currentState.start();
     console.log(currentState.numChildren);
 }
-//# sourceMappingURL=game.js.map
