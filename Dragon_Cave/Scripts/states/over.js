@@ -6,19 +6,19 @@ var __extends = (this && this.__extends) || function (d, b) {
 var states;
 (function (states) {
     // menu class
-    var Menu = (function (_super) {
-        __extends(Menu, _super);
+    var Over = (function (_super) {
+        __extends(Over, _super);
         //constructor
-        function Menu() {
+        function Over() {
             _super.call(this);
         }
         //private method
         //callback function that allows to respond to button click events
-        Menu.prototype._buttonClicked = function (event) {
-            changeState(config.PLAY_STATE);
+        Over.prototype._buttonClicked = function (event) {
+            changeState(config.MENU_STATE);
         };
         //public methods
-        Menu.prototype.start = function () {
+        Over.prototype.start = function () {
             //instantiate and add a logo
             this._logo = new createjs.Bitmap("../../Assets/images/logo_small.png");
             this._logo.regX = 155;
@@ -26,18 +26,18 @@ var states;
             this._logo.x = 410;
             this._logo.y = 140;
             this.addChild(this._logo);
-            this._introLabel = new objects.Label(" Do you want to play?", "40px Consolas", "#000000", 320, 260);
-            this.addChild(this._introLabel);
+            this._endLabel = new objects.Label("The End", "40px Consolas", "#000000", 320, 260);
+            this.addChild(this._endLabel);
             //instantiate and add a start button
-            this._startButton = new objects.Button("startButton", 300, 340);
-            this.addChild(this._startButton);
-            this._startButton.on("click", this._buttonClicked, this);
+            this._againButton = new objects.Button("againButton", 300, 340);
+            this.addChild(this._againButton);
+            this._againButton.on("click", this._buttonClicked, this);
             stage.addChild(this);
         };
-        Menu.prototype.update = function () {
+        Over.prototype.update = function () {
         };
-        return Menu;
+        return Over;
     })(objects.Scene);
-    states.Menu = Menu;
+    states.Over = Over;
 })(states || (states = {}));
-//# sourceMappingURL=menu.js.map
+//# sourceMappingURL=over.js.map

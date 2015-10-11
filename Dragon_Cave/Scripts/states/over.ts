@@ -1,10 +1,10 @@
 ﻿
 module states {
     // menu class
-    export class Menu extends objects.Scene {
+    export class Over extends objects.Scene {
         // private instance variables
-        _introLabel: objects.Label;
-        _startButton: objects.Button;
+        _endLabel: objects.Label;
+        _againButton: objects.Button;
         _logo: createjs.Bitmap;
 
         //constructor
@@ -15,8 +15,8 @@ module states {
         //private method
         //callback function that allows to respond to button click events
         private _buttonClicked(event: createjs.MouseEvent): void {
-            changeState(config.PLAY_STATE);
-    }
+            changeState(config.MENU_STATE);
+        }
 
         //public methods
         public start(): void {
@@ -28,12 +28,12 @@ module states {
             this._logo.y = 140;
             this.addChild(this._logo);
 
-            this._introLabel = new objects.Label(" Do you want to play?", "40px Consolas", "#000000", 320, 260);
-            this.addChild(this._introLabel);
+            this._endLabel = new objects.Label("The End", "40px Consolas", "#000000", 320, 260);
+            this.addChild(this._endLabel);
             //instantiate and add a start button
-            this._startButton = new objects.Button("startButton", 300, 340);
-            this.addChild(this._startButton);
-            this._startButton.on("click", this._buttonClicked, this);
+            this._againButton = new objects.Button("againButton", 300, 340);
+            this.addChild(this._againButton);
+            this._againButton.on("click", this._buttonClicked, this);
             stage.addChild(this);
         }
 

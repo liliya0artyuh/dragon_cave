@@ -9,6 +9,8 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../states/menu.ts" />
+/// <reference path="../states/over.ts" />
+/// <reference path="../states/game.ts" />
 // Global Game Framework Variables
 var canvas;
 var stage;
@@ -17,6 +19,8 @@ var state;
 var currentState; // alias for our current state
 // Game variables
 var menu;
+var game;
+var over;
 function preload() {
     //   assets = new createjs.LoadQueue();
     //assets.installPlugin(createjs.Sound);
@@ -33,7 +37,7 @@ function init() {
     createjs.Ticker.on("tick", gameLoop, this); // update gameLoop every frame
     setupStats(); // setup statistics object
     state = config.MENU_STATE;
-    changeState();
+    changeState(state);
 }
 // Main Game Loop
 function gameLoop(event) {
@@ -54,18 +58,26 @@ function setupStats() {
     document.body.appendChild(stats.domElement);
 }
 // state machine
-function changeState() {
+function changeState(state) {
     //lauch various scenes
     switch (state) {
         case config.MENU_STATE:
+            stage.removeAllChildren();
             menu = new states.Menu();
             console.log(menu);
             currentState = menu;
             break;
         case config.PLAY_STATE:
+            stage.removeAllChildren();
+            game = new states.Game("Pin");
+            currentState = game;
             break;
         case config.OVER_STATE:
+            stage.removeAllChildren();
+            over = new states.Over();
+            currentState = over;
             break;
     }
     currentState.start();
 }
+//# sourceMappingURL=game.js.map

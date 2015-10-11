@@ -11,6 +11,8 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../states/menu.ts" />
+/// <reference path="../states/over.ts" />
+/// <reference path="../states/game.ts" />
 
 
 // Global Game Framework Variables
@@ -22,6 +24,8 @@ var currentState: objects.Scene; // alias for our current state
 
 // Game variables
 var menu: states.Menu;
+var game: states.Game;
+var over: states.Over;
 
 
 function preload(): void {
@@ -45,7 +49,7 @@ function init(): void {
     setupStats();// setup statistics object
 
     state = config.MENU_STATE;
-    changeState();
+    changeState(state);
 }
 
 // Main Game Loop
@@ -76,21 +80,26 @@ function setupStats(): void {
 
 
 // state machine
-function changeState(): void {
+function changeState(state): void {
     //lauch various scenes
 
     switch (state) {
         case config.MENU_STATE:
+            stage.removeAllChildren();
             menu = new states.Menu();
             console.log(menu);
             currentState = menu;
             break;
         case config.PLAY_STATE:
-
+            stage.removeAllChildren();
+            game = new states.Game("Pin");
+            currentState = game;
             break;
 
         case config.OVER_STATE:
-
+            stage.removeAllChildren();
+            over = new states.Over();
+            currentState = over;
             break;
     }
     currentState.start();
