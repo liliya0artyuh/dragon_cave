@@ -64,7 +64,7 @@ var states;
         //public methods
         Over.prototype.start = function () {
             //instantiate and add a logo
-            this._logo = new createjs.Bitmap("../../Assets/images/logo_small.png");
+            this._logo = new createjs.Bitmap(assets.getResult("logo"));
             this._logo.regX = 155;
             this._logo.regY = 101;
             this._logo.x = 440;
@@ -74,7 +74,7 @@ var states;
             this.addChild(this._outcomeLabel);
             if (this._won) {
                 //instantiate and add a tooth image
-                this._tooth = new createjs.Bitmap("../../Assets/images/tooth.jpg");
+                this._tooth = new createjs.Bitmap(assets.getResult("tooth"));
                 this._tooth.regX = 52;
                 this._tooth.regY = 30;
                 this._tooth.x = 360;
@@ -95,3 +95,4 @@ var states;
     })(objects.Scene);
     states.Over = Over;
 })(states || (states = {}));
+//# sourceMappingURL=over.js.map

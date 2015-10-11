@@ -43,10 +43,13 @@ var manifest = [
     { id: "startButton", src: "../../Assets/images/startButton.png" },
     { id: "swimButton", src: "../../Assets/images/swimButton.png" },
     { id: "swimByButton", src: "../../Assets/images/swimByButton.png" },
-    { id: "soundtrack", src: "../../Assets/audio/gameSound.m4a" }
+    { id: "soundtrack", src: "../../Assets/audio/gameSound.m4a" },
+    { id: "tooth", src: "../../Assets/images/tooth.jpg" },
+    { id: "dragon", src: "../../Assets/images/dragon_1.jpg" },
+    { id: "logo", src: "../../Assets/images/logo_small.png" }
 ];
 function preload() {
-    assets = new createjs.LoadQueue();
+    assets = new createjs.LoadQueue(true);
     assets.installPlugin(createjs.Sound);
     //event listener triggers when assets are completely loaded
     assets.on("complete", init, this);
@@ -105,3 +108,4 @@ function changeState(state) {
     currentState.start();
     console.log(currentState.numChildren);
 }
+//# sourceMappingURL=game.js.map

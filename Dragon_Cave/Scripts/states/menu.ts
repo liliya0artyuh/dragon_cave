@@ -30,6 +30,8 @@ module states {
 
             this._introLabel = new objects.Label(" Do you want to play?", "40px Consolas", "#000000", 320, 260);
             this.addChild(this._introLabel);
+
+
             //instantiate and add a start button
             this._startButton = new objects.Button("startButton", 300, 340);
             this.addChild(this._startButton);

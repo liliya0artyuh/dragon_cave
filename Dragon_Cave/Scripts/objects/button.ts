@@ -16,7 +16,6 @@
             this.regX = this.width * 0.5;
             this.regY = this.height * 0.5;
 
-
             this.on("mouseover", this.buttonOver, this);
             this.on("mouseout", this.buttonOut, this);
 

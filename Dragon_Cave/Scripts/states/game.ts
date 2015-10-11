@@ -125,7 +125,7 @@ module states {
         }
 
         private _swamp(): void {
-            stage.removeAllChildren();
+            this.removeAllChildren();
 
             this._textLabel.text = (this._name + " turned left and got right into a big swamp. \n\nTo save himself from getting drawned he decided to ...");
             this.addChild(this._textLabel);
@@ -144,9 +144,9 @@ module states {
         }
 
         private _tree(): void {
-            stage.removeAllChildren();
+            this.removeAllChildren();
 
-            this._textLabel.text = (this._name + " started swimming. \n\nIt was hard do do... The swamp was pulling him down. \n\n" + this._name + " saw a tree trunk ahead.\n\nHe/she was considering to climb on the tree trunk or to continue swimming.\n\nHe prayed to God to help him make right decision.");
+            this._textLabel.text = (this._name + " started swimming. \n\nIt was hard do do... The swamp was pulling him down. \n\n" + this._name + " saw a tree trunk ahead.\n\nHe/she was considering to climb on the tree trunk or to continue swimming.\n\nHe prayed to God to help him make the right decision.");
             this.addChild(this._textLabel);
             //instantiate and add a left button
             this._leftButton = new objects.Button("getOnButton", 150, 340);
@@ -156,14 +156,14 @@ module states {
 
 
             //instantiate and add a right button
-            this._rightButton = new objects.Button("swimBytButton", 430, 340);
+            this._rightButton = new objects.Button("swimByButton", 430, 340);
             this.addChild(this._rightButton);
             this._rightButton.on("click", this._swimByButtonClicked, this);
             stage.addChild(this);
         }
 
         private _bear(): void {
-            stage.removeAllChildren();
+            this.removeAllChildren();
 
             this._textLabel.text = (this._name + " was screaming very loudly in the hope to get some help. \n\nHe/she saw something moving in the woods.\n\nIt was a big brown bear. \n\n" + this._name + " didn't know whether to pretend to be dead or to scream to scary the bear away. \n\nWhat is he/she going to do?...");
             this.addChild(this._textLabel);
@@ -182,7 +182,7 @@ module states {
         }
 
         private _bread(): void {
-            stage.removeAllChildren();
+            this.removeAllChildren();
 
             this._textLabel.text = (this._name + " turned right. \n\nAs he/she was walking along the path he saw a loaf of bread on the ground.\n\n" + this._name + " was hungry so he/she picked up the loaf. \n\nHowever, he/she was a bit cautious. \n\nHe/She stood there for a while with the delema 'to eat it or to save it for later'. \n\nIn the end he/she decided to...");
             this.addChild(this._textLabel);
@@ -201,7 +201,7 @@ module states {
         }
 
         private _sick(): void {
-            stage.removeAllChildren();
+            this.removeAllChildren();
 
             this._textLabel.text = (this._name + " ate the bread and got sick. \n\nHe/she saw a spring with fresh water ahead.\n\nHe/she couldn't walk so he crawlled to the spring.\n\nWhen " + this._name + " reached the spring he/she was feeling sleepy. \n\nHe/she had a choice to make drink some water or to rest first.");
             this.addChild(this._textLabel);
@@ -220,7 +220,7 @@ module states {
         }
 
         private _dragon(): void {
-            stage.removeAllChildren();
+            this.removeAllChildren();
 
             this._textLabel.text = (this._name + " put the bread in his pouch to save it for when he is truly starving. \n\nHe continued to walk until he saw a big cave.\n\nHe/she went in and saw a big dragon sleeping there.\n\nIt was tempting to attack the dragon while it was sleeping.\n\nBut " + this._name + " also felt bad about killing.\n\nHe/she though that perhaps he can tame the dragon by feeding him the bread he found.\n\nWhat will " + this._name + " do in the end?...");
             this.addChild(this._textLabel);
