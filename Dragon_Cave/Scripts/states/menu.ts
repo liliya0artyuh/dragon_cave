@@ -31,11 +31,11 @@ module states {
             this._logo = new createjs.Bitmap(assets.getResult("dragon"));
             this._logo.regX = 155;
             this._logo.regY = 101;
-            this._logo.x = 350;
-            this._logo.y = 140;
+            this._logo.x = 360;
+            this._logo.y = 145;
             this.addChild(this._logo);
 
-            this._nameLabel = new objects.Label("What's your name?", "12px Consolas", "#000000", 250, 220);
+            this._nameLabel = new objects.Label("What's your name?", "12px Consolas", "#000000", 150, 220);
             this.addChild(this._nameLabel);
 
             document.getElementById("txtName").style.display = "inline";
