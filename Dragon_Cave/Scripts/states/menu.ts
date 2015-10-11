@@ -21,10 +21,10 @@ module states {
         //public methods
         public start(): void {
             //instantiate and add a logo
-            this._logo = new createjs.Bitmap("../../Assets/images/logo_small.png");
+            this._logo = new createjs.Bitmap("../../Assets/images/dragon_1.jpg");
             this._logo.regX = 155;
             this._logo.regY = 101;
-            this._logo.x = 410;
+            this._logo.x = 350;
             this._logo.y = 140;
             this.addChild(this._logo);
 

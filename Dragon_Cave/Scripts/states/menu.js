@@ -20,10 +20,10 @@ var states;
         //public methods
         Menu.prototype.start = function () {
             //instantiate and add a logo
-            this._logo = new createjs.Bitmap("../../Assets/images/logo_small.png");
+            this._logo = new createjs.Bitmap("../../Assets/images/dragon_1.jpg");
             this._logo.regX = 155;
             this._logo.regY = 101;
-            this._logo.x = 410;
+            this._logo.x = 350;
             this._logo.y = 140;
             this.addChild(this._logo);
             this._introLabel = new objects.Label(" Do you want to play?", "40px Consolas", "#000000", 320, 260);
@@ -40,3 +40,4 @@ var states;
     })(objects.Scene);
     states.Menu = Menu;
 })(states || (states = {}));
+//# sourceMappingURL=menu.js.map
