@@ -27,4 +27,6 @@ canvas {
     BOTTOM: 255px;
     right: 30%;
     z-index: 101;
+    width: 100px;
+    height: 20px;
 }
