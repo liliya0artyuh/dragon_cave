@@ -23,8 +23,8 @@ canvas {
 }
 
 #txtName {
-    position: absolute;
-    top:280px;
-    left: 530px;
+    position: relative;
+    BOTTOM: 255px;
+    right: 30%;
     z-index: 101;
 }
