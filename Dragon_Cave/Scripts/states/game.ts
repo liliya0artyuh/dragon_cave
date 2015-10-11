@@ -9,11 +9,8 @@ module states {
         _dragon_cave: createjs.Bitmap;
 
         //constructor
-        constructor(name: string) {
+        constructor() {
             super();
-            if (name == null || name =="") {
-                name = "Pin";
-            }
         }
 
         //private method

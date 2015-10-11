@@ -99,7 +99,7 @@ function changeState(state) {
             break;
         case config.PLAY_STATE:
             stage.removeAllChildren();
-            game = new states.Game(name);
+            game = new states.Game();
             currentState = game;
             break;
         case config.OVER_STATE:
@@ -111,3 +111,4 @@ function changeState(state) {
     currentState.start();
     console.log(currentState.numChildren);
 }
+//# sourceMappingURL=game.js.map

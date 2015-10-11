@@ -9,11 +9,8 @@ var states;
     var Game = (function (_super) {
         __extends(Game, _super);
         //constructor
-        function Game(name) {
+        function Game() {
             _super.call(this);
-            if (name == null || name == "") {
-                name = "Pin";
-            }
         }
         //private method
         //callback function that allows to respond to button click events  - path 1
@@ -192,3 +189,4 @@ var states;
     })(objects.Scene);
     states.Game = Game;
 })(states || (states = {}));
+//# sourceMappingURL=game.js.map

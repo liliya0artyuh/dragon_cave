@@ -15,7 +15,11 @@ var states;
         //private method
         //callback function that allows to respond to button click events
         Menu.prototype._buttonClicked = function (event) {
+            //get the name of user
             name = document.getElementById("txtName").value;
+            if (name == null || name == "") {
+                name = "Pin";
+            }
             console.log(name);
             changeState(config.PLAY_STATE);
         };
@@ -46,3 +50,4 @@ var states;
     })(objects.Scene);
     states.Menu = Menu;
 })(states || (states = {}));
+//# sourceMappingURL=menu.js.map

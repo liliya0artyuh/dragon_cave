@@ -123,7 +123,7 @@ function changeState(state): void {
             break;
         case config.PLAY_STATE:
             stage.removeAllChildren();
-            game = new states.Game(name);
+            game = new states.Game();
             currentState = game;
             break;
 

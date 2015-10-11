@@ -16,7 +16,11 @@ module states {
         //private method
         //callback function that allows to respond to button click events
         private _buttonClicked(event: createjs.MouseEvent): void {
+            //get the name of user
             name = (<HTMLInputElement>document.getElementById("txtName")).value;
+            if (name == null || name == "") {
+                name = "Pin";
+            }
             console.log(name);
             changeState(config.PLAY_STATE);
     }
