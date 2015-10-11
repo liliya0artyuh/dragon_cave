@@ -1,23 +1,13 @@
-﻿
-
-body {
+﻿body {
     background-color: grey;
-        border: solid 1px red;
 }
 
-canvas {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-left: 20%;
-    background-color: white;
-    position: relative;
-}
 
 #game {
-    width:80%;
+    width: 644px;
+    height: 484px;
     margin: 0 auto;
     position: relative;
-        border: solid 1px green;
 }
 
 #gameTitle {
@@ -27,10 +17,18 @@ canvas {
     color: white;
 }
 
+canvas {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+}
+
+
 #txtName {
     position: absolute;
     top: 210px;
-    right: 80px;
+    right: 180px;
     z-index: 101;
     width: 150px;
     height: 20px;

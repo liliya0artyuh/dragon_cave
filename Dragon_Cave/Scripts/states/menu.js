@@ -32,7 +32,7 @@ var states;
             this._logo.x = 360;
             this._logo.y = 145;
             this.addChild(this._logo);
-            this._nameLabel = new objects.Label("What's your name?", "12px Consolas", "#000000", 150, 220);
+            this._nameLabel = new objects.Label("What's your name?", "12px Consolas", "#000000", 250, 220);
             this.addChild(this._nameLabel);
             document.getElementById("txtName").style.display = "inline";
             console.log(name);
