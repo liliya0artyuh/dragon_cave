@@ -189,3 +189,4 @@ var states;
     })(objects.Scene);
     states.Game = Game;
 })(states || (states = {}));
+//# sourceMappingURL=game.js.map

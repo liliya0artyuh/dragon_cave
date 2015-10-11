@@ -1,5 +1,8 @@
-﻿body {
+﻿
+
+body {
     background-color: grey;
+        border: solid 1px red;
 }
 
 canvas {
@@ -14,6 +17,7 @@ canvas {
     width:80%;
     margin: 0 auto;
     position: relative;
+        border: solid 1px green;
 }
 
 #gameTitle {
@@ -24,9 +28,9 @@ canvas {
 }
 
 #txtName {
-    position: relative;
-    BOTTOM: 280px;
-    left: 590px;
+    position: absolute;
+    top: 210px;
+    right: 80px;
     z-index: 101;
     width: 150px;
     height: 20px;
